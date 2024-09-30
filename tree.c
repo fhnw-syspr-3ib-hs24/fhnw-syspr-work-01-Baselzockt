@@ -8,7 +8,7 @@ Tree *newTree() {
     return malloc(sizeof(Tree));
 }
 
-Tree *initTree(char *s) {
+Tree *initTree(const char *s) {
     return setLabel(newTree(), s);
 }
 

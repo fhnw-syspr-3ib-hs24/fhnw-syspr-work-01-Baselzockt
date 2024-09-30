@@ -18,7 +18,7 @@ void freeTree(Tree *t);
 
 Tree *newTree();
 
-Tree *initTree(char *s);
+Tree *initTree(const char *s);
 
 Tree *addNode(Tree *t, Tree *node, Side s);
 #endif // TREE_H
