@@ -1,4 +1,3 @@
-#include  "my_tree.h"
 #include "tree.h"
 
 int main() {
