@@ -1,9 +1,18 @@
 #include  "my_tree.h"
 #include "tree.h"
-#include <stdlib.h>
 
 int main() {
-    Tree *t = malloc(sizeof(Tree));
-    free(t);
+    Tree *root =
+            addNode(
+                addNode(
+                    newTree(),
+                    initTree("3"), RIGHT),
+                addNode(
+                    addNode(
+                        newTree(),
+                        initTree("1"), LEFT),
+                        initTree("2"), RIGHT),
+                LEFT);
+    freeTree(root);
     return 0;
 }

@@ -1,7 +1,24 @@
 #ifndef TREE_H
 #define TREE_H
 
-typedef struct tree Tree;
+typedef enum side {
+    LEFT,
+    RIGHT
+} Side;
 
-void setLabel(Tree *t, char *s);
+typedef struct tree {
+    struct tree *left;
+    struct tree *right;
+    char *label;
+} Tree;
+
+Tree *setLabel(Tree *t, char *s);
+
+void freeTree(Tree *t);
+
+Tree *newTree();
+
+Tree *initTree(char *s);
+
+Tree *addNode(Tree *t, Tree *node, Side s);
 #endif // TREE_H
