@@ -26,7 +26,7 @@ void freeTree(Tree *t) {
 }
 
 Tree *setLabel(Tree *t, const char *s) {
-    if (strlen(s) * sizeof(char) > 32) {
+    if (strlen(s) > 32) {
         return t;
     }
     t->label = strdup(s);
