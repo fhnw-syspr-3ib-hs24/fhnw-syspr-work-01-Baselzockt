@@ -10,8 +10,9 @@ int main() {
                     addNode(
                         newTree(),
                         initTree("1"), LEFT),
-                        initTree("2"), RIGHT),
+                    initTree("2"), RIGHT),
                 LEFT);
+    printTree(root,0);
     freeTree(root);
     return 0;
 }

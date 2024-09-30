@@ -20,5 +20,7 @@ Tree *newTree();
 
 Tree *initTree(const char *s);
 
+void printTree(Tree *t, int depth);
+
 Tree *addNode(Tree *t, Tree *node, Side s);
 #endif // TREE_H
