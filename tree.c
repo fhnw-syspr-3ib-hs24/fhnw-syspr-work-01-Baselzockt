@@ -13,6 +13,9 @@ Tree *initTree(char *s) {
 }
 
 void freeTree(Tree *t) {
+    if (t->label) {
+        free(t->label);
+    }
     if (t->left) {
         freeTree(t->left);
     }
@@ -22,11 +25,11 @@ void freeTree(Tree *t) {
     free(t);
 }
 
-Tree *setLabel(Tree *t, char *s) {
+Tree *setLabel(Tree *t, const char *s) {
     if (strlen(s) * sizeof(char) > 32) {
         return t;
     }
-    t->label = s;
+    t->label = strdup(s);
     return t;
 }
 

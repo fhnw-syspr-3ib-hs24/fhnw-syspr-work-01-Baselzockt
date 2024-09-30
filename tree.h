@@ -12,7 +12,7 @@ typedef struct tree {
     char *label;
 } Tree;
 
-Tree *setLabel(Tree *t, char *s);
+Tree *setLabel(Tree *t, const char *s);
 
 void freeTree(Tree *t);
 
